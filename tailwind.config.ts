@@ -17,4 +17,15 @@ const config: Config = {
   },
   plugins: [],
 }
+
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    // other paths...
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [require('daisyui')],
+}
 export default config
