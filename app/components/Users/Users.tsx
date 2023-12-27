@@ -32,7 +32,7 @@ const Users:React.FC<UsersProps> = ({view, setView}) =>{
       <div className={'overflow-x-auto'}>
         <table className={'table'}>
           <thead className="bg-indigo-800">
-            <tr className="border-b border-gray-500 text-[20px]">
+            <tr className="border-b border-gray-500 text-[30px]">
               <th className="text-white text-semibold">Name</th>
               <th className="text-white text-semibold">Email</th>
               <th className="text-white text-semibold">City</th>
