@@ -44,6 +44,8 @@ const handleNextPage = () => {
   }
 };
 
+
+
 const handlePrevPage = () => {
   if (currentPage > 1) {
     setCurrentPage(currentPage - 1);
@@ -66,7 +68,7 @@ return (
 
   </div>
    <div className='flex flex-row items-center gap-4 text-black mt-5 '>
-   <button className={`${currentPage === 1? 'text-black/30' :'text-black'}`} onClick={handlePrevPage}>Prev.</button>
+   <button className={`${currentPage === 1? 'text-black/30' :'text-black' }`} onClick={handlePrevPage}>Prev.</button>
    <p>{currentPage}</p>
    <button className={`${currentPage === totalPages? 'text-black/30' :'text-black'}`} onClick={handleNextPage}>Next</button>
  </div>
