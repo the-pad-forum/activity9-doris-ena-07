@@ -59,7 +59,7 @@ return (
   <div className='flex flex-col space-y-3'>
     {visibleData.map(post => (
       <div key={post.id}>
-        <h3 className='text-slate-800 text-[16px] font-semibold uppercase'>{capitalizeFirstCharacter(post.title)}.</h3>
+        <h3 className='text-slate-800 text-[16px] font-semibold u'>{capitalizeFirstCharacter(post.title)}.</h3>
         <p className='text-sm text-slate-800'>{capitalizeFirstCharacter(post.body)}</p>
       </div>
     ))}
