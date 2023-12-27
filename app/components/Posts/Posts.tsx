@@ -56,11 +56,11 @@ const getPageNumbers = () => {
 
 return (
   <>
-  <div className='flex flex-col space-y-3'>
+  <div className='flex flex-col mt-5 space-y-8'>
     {visibleData.map(post => (
       <div key={post.id}>
-        <h3 className='text-slate-800 text-[16px] font-semibold u'>{capitalizeFirstCharacter(post.title)}.</h3>
-        <p className='text-sm text-slate-800'>{capitalizeFirstCharacter(post.body)}</p>
+        <h3 className='text-slate-800 text-2xl font-semibold capitalize'>{post.title}.</h3>
+        <p className='text-slate-800'>{capitalizeFirstCharacter(post.body)}</p>
       </div>
     ))}
 
