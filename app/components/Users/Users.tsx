@@ -28,7 +28,7 @@ const Users:React.FC<UsersProps> = ({view, setView}) =>{
   }, []);
 
   return (
-    <div className="card bg-white shadow-lg shadow-indigo-500/40 ">
+    <div className="card mt-8 bg-white shadow-lg shadow-indigo-500/40 ">
       <div className={'overflow-x-auto'}>
         <table className={'table'}>
           <thead className="bg-indigo-800">
