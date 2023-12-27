@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { Syne } from 'next/font/google'
+import { Cabin } from 'next/font/google'
 import './globals.css'
 
-const inter = Syne({ subsets: ['latin'] })
+const inter = Cabin({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Tables, Posts and Paragraphs',
