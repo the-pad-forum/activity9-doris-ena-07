@@ -2,20 +2,4 @@
     /* Styling for individual posts */
   /* } */
 
-  .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    /* Additional styling */
-  }
-    
-  .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 8px;
-    padding: 10px;
-    color: #312e81;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
+ 
