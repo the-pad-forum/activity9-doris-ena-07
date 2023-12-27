@@ -31,7 +31,7 @@ const Albums:React.FC<AlbumsProps> = ({view, setView}) =>{
       .then(data => setAlbums(data as Album[]));
   }, []);
 
-  const itemsPerPage = 9;
+  const itemsPerPage = 12;
 const totalPages = Math.ceil(albums.length / itemsPerPage);
 
 const visibleData = albums.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
