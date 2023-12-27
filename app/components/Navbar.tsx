@@ -8,9 +8,9 @@ interface NavbarProps {
 
 const Navbar:React.FC<NavbarProps> = ({view, setView}) =>{
   return <div className="bg-white shadow-md flex flex-row items-center justify-end gap-8 fixed h-[80px] w-[100%] left-0 top-0 z-10 px-6">
-    <button className="cursor-pointer text-black" onClick={()=>setView('Albums')}>Albums</button>
-    <button className="cursor-pointer text-black" onClick={()=>setView('Users')}>Users</button>
-    <button className="cursor-pointer text-black" onClick={()=>setView('Posts')}>Posts</button>
+    <button className="cursor-pointer text-indigo-900" onClick={()=>setView('Albums')}>Albums</button>
+    <button className="cursor-pointer text-indigo-900" onClick={()=>setView('Users')}>Users</button>
+    <button className="cursor-pointer text-indigo-900" onClick={()=>setView('Posts')}>Posts</button>
   </div>;
 };
 

@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect, FC } from 'react';
 import styles from './Users.module.css';
 
@@ -11,8 +13,12 @@ interface User {
   };
   // Other user fields
 }
-
-const Users: FC = () => {
+interface UsersProps {
+  view: string; // Change 'string' to the actual type of your 'view' prop
+  setView: React.Dispatch<React.SetStateAction<string>>; // Change 'string' to the actual type of your 'view' prop
+  
+}
+const Users:React.FC<UsersProps> = ({view, setView}) =>{
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
@@ -22,27 +28,30 @@ const Users: FC = () => {
   }, []);
 
   return (
-    <div className={styles.tableContainer}>
-      <table className={styles.table}>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>City</th>
-            {/* Other headings */}
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(user => (
-            <tr key={user.id}>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>{user.address.city}</td>
-              {/* Other data */}
+    <div className="card bg-white shadow-lg shadow-indigo-500/40 ">
+      <div className={'overflow-x-auto'}>
+        <table className={'table'}>
+          <thead className="bg-indigo-800">
+            <tr className="border-b border-gray-500 text-[20px]">
+              <th className="text-white text-semibold">Name</th>
+              <th className="text-white text-semibold">Email</th>
+              <th className="text-white text-semibold">City</th>
+              {/* Other headings */}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody className="divide-y divide-gray-100">
+            {users.map(user => (
+              <tr key={user.id}>
+                <td  className="text-slate-800 border-t-[1px] border-black border-solid">{user.name}</td>
+                <td className="text-slate-800 border-t-[1px] border-black border-solid" >{user.email}</td>
+                <td className="text-slate-800 border-t-[1px] border-black border-solid">{user.address.city}</td>
+                {/* Other data */}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
