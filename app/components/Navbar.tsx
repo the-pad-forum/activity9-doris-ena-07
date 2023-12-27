@@ -4,7 +4,7 @@ type Props = {};
 
 interface NavbarProps {
   view: string;
-  setView: React.Dispatch<React.SetStateAction<string>>
+  setView: React.Dispatch<React.SetStateAction<sting>>
 }; 
 
 const Navbar:React.FC<NavbarProps> = ({view, setView}) => {
