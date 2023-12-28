@@ -64,9 +64,9 @@ const getPageNumbers = () => {
       ))}
     </div>
     <div className='flex flex-row items-center gap-4 text-black '>
-      <button className={`${currentPage === 1? 'text-black/30' :'text-black'}`} onClick={handlePrevPage}>Prev.</button>
+      <button className={`bg-indigo-500 px-2 py-1 border-indigo-900 border-solid border-[1px] ${currentPage === 1? 'text-black/30' :'text-white'}`} onClick={handlePrevPage}>Prev.</button>
       <p>{currentPage}</p>
-      <button className={`${currentPage === totalPages? 'text-black/30' :'text-black'}`} onClick={handleNextPage}>Next</button>
+      <button className={` bg-indigo-500 px-2 py-1 border-indigo-900 border-solid border-[1px] ${currentPage === totalPages? 'text-black/30' :'text-white'}`} onClick={handleNextPage}>Next</button>
     </div>
     </>
   );
