@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Cabin } from 'next/font/google'
+import Navbar from './components/Navbar'
 import './globals.css'
 
 const inter = Cabin({ subsets: ['latin'] })
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-indigo-300`}>{children}</body>
+      <body className={`${inter.className} bg-indigo-300 pt-[80px] min-h-screen`}>
+        <Navbar />
+
+        {children}
+      </body>
     </html>
   )
 }
