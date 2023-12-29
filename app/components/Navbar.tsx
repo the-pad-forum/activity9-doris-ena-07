@@ -1,29 +1,27 @@
+"use client";
+
 import React from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import Image from "next/image"
 
-type Props = {};
+const Navbar = () => {
+  const pathname = usePathname()
 
-interface NavbarProps {
-  view: string;
-  setView: React.Dispatch<React.SetStateAction<string>>
-}; 
-
-const Navbar:React.FC<NavbarProps> = ({view, setView}) => {
   return (
-    <div className="bg-white opacity-2 shadow-md flex flex-row items-center gap-x-3 justify-end fixed h-[80px] w-[100%] left-0 top-0 z-10 px-6">
-      <button 
-        className={`nav-item ${view === 'Albums' && 'active'}`} 
-        onClick={()=>setView('Albums')}
-      >Albums</button>
+    <div className="bg-white opacity-2 shadow-md flex flex-row justify-between items-center gap-x-3 fixed h-[80px] w-full left-0 top-0 z-10 px-6">
+      <div className="flex items-center space-x-2">
+        <Image src="/logo.png" height={100} width={100} alt="logo"/>
+        <p className="text-indigo-900 text-[25px]">Fetch API Project</p> 
+      </div>
 
-      <button 
-        className={`nav-item ${view === 'Users' && 'active'}`} 
-        onClick={()=>setView('Users')}
-      >Users</button>
+      <div className="flex flex-row items-center gap-x-3">
+        <Link href="/" className={`nav-item ${pathname === '/' && 'active'}`}>Albums</Link>
 
-      <button 
-        className={`nav-item ${view === 'Posts' && 'active'}`} 
-        onClick={()=>setView('Posts')}
-      >Posts</button>
+        <Link href="/users" className={`nav-item ${pathname === '/users' && 'active'}`}>Users</Link>
+
+        <Link href="/posts" className={`nav-item ${pathname === '/posts' && 'active'}`}>Posts</Link>
+      </div>
     </div>
   );
 };
