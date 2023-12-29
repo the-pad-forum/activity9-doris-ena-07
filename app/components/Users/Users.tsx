@@ -24,7 +24,7 @@ const Users = () =>{
   }, []);
 
   return (
-    <div className="card mt-5 bg-white shadow-lg shadow-indigo-500/40 ">
+    <div className="card bg-white shadow-lg shadow-indigo-500/40 ">
       <div className={'overflow-x-auto'}>
         <table className={'table pb-6'}>
           <thead className="bg-indigo-800">
