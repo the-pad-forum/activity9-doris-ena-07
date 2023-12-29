@@ -2,7 +2,6 @@
 import React from 'react'
 import Albums from './components/Albums/Albums'
 import { useState } from 'react'
-import Footer from './components/Footer/Footer'
 
 export default function Home() {
   return (
@@ -11,8 +10,6 @@ export default function Home() {
 
       <Albums />
     </div>
-
-    // <Footer/>
   )
 
   
