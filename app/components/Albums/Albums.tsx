@@ -14,7 +14,7 @@ const Albums = () =>{
   const [albums, setAlbums] = useState<Album[]>([]);
   const [currentPage, setCurrentPage]=useState<number>(1)
   const [showPage, setShowpage] = useState<boolean>(false)
-  const itemsPerPage = 12;
+  const itemsPerPage = 9;
   const totalPages = Math.ceil(albums.length / itemsPerPage);
   const visibleData = albums.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
