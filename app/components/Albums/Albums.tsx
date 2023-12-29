@@ -63,10 +63,10 @@ const Albums = () =>{
         ))}
       </div>
 
-      <div className='flex flex-row items-center gap-4 text-black justify-center pb-2 '>
-        <button className={`bg-indigo-500 px-2 py-1 border-indigo-900 border-solid border-[1px] ${currentPage === 1? 'text-black/30' :'text-white'}`} onClick={handlePrevPage}>Prev.</button>
+      <div className='flex flex-row items-center gap-4 text-black justify-center pb-8'>
+        <button className={`bg-indigo-500 px-2 py-1 border-indigo-400 border-solid border-[1px] rounded-md ${currentPage === 1? 'text-black/30' :'text-white'}`} onClick={handlePrevPage}>Prev.</button>
         <p>{currentPage}</p>
-        <button className={` bg-indigo-500 px-2 py-1 border-indigo-900 border-solid border-[1px] ${currentPage === totalPages? 'text-black/30' :'text-white'}`} onClick={handleNextPage}>Next</button>
+        <button className={` bg-indigo-500 px-2 py-1 border-indigo-400 border-solid border-[1px] rounded-md ${currentPage === totalPages? 'text-black/30' :'text-white'}`} onClick={handleNextPage}>Next</button>
       </div>
     </>
   );
