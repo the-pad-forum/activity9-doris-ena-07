@@ -7,9 +7,9 @@
         @apply cursor-pointer transition-all duration-300 rounded-md py-1.5 px-3.5 text-indigo-900;
     }
     .nav-item:not(.active) {
-        @apply hover:bg-indigo-400;
+        @apply hover:bg-indigo-400 hover:text-white;
     }
     .nav-item.active {
-        @apply bg-indigo-400;
+        @apply bg-indigo-400 text-white;
     }
 }
