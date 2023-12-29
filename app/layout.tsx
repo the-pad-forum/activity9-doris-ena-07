@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Cabin } from 'next/font/google'
 import Navbar from './components/Navbar'
 import './globals.css'
+import Footer from './components/Footer/Footer'
 
 const inter = Cabin({ subsets: ['latin'] })
 
@@ -21,7 +22,13 @@ export default function RootLayout({
         <Navbar />
 
         {children}
+        <Footer/>
       </body>
+
+      
     </html>
   )
 }
+
+
+
