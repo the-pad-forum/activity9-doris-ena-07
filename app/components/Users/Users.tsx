@@ -13,12 +13,8 @@ interface User {
   };
   // Other user fields
 }
-interface UsersProps {
-  view: string; // Change 'string' to the actual type of your 'view' prop
-  setView: React.Dispatch<React.SetStateAction<string>>; // Change 'string' to the actual type of your 'view' prop
-  
-}
-const Users:React.FC<UsersProps> = ({view, setView}) =>{
+
+const Users = () =>{
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
@@ -28,9 +24,9 @@ const Users:React.FC<UsersProps> = ({view, setView}) =>{
   }, []);
 
   return (
-    <div className="card mt-8 bg-white shadow-lg shadow-indigo-500/40 ">
+    <div className="card mt-5 bg-white shadow-lg shadow-indigo-500/40 ">
       <div className={'overflow-x-auto'}>
-        <table className={'table'}>
+        <table className={'table pb-6'}>
           <thead className="bg-indigo-800">
             <tr className="border-b border-gray-500 text-[25px]">
               <th className="text-white text-semibold">Name</th>
