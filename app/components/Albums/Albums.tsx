@@ -49,7 +49,7 @@ const Albums = () =>{
     <>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 py-10 pt-2">
         {visibleData.map(album => (
-          <div key={album.id} className={'card w-100  bg-white shadow-lg shadow-indigo-500/40 h-[300px] overflow-hidden'}>
+          <div key={album.id} className={'card w-50  bg-white shadow-lg shadow-indigo-500/40 h-[300px] overflow-hidden'}>
             <figure><img 
               src="https://media.istockphoto.com/id/1446382435/vector/vinyl-record-retro-art.jpg?s=612x612&w=0&k=20&c=D_WaBL6mShb_Doi7E1MhaFfMjrS2tBTdUb48csUq9Kk=" 
               alt="Shoes" 
@@ -57,7 +57,7 @@ const Albums = () =>{
             /></figure>
 
             <div className="card-body">
-              <h3 className='card-title text-indigo-900 text-lg font-semibold'>{capitalizeFirstCharacter(album.title)}</h3>
+              <h3 className='card-title text-indigo-900 justify-center text-lg font-semibold'>{capitalizeFirstCharacter(album.title)}</h3>
             </div>
           </div>
         ))}
